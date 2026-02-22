@@ -1,0 +1,1 @@
+// Arrow function vs Regular function;
