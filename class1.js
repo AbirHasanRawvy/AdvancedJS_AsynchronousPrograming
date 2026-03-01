@@ -41,7 +41,53 @@ console.log(age);
 //
 const person = {name: "Rawvy"};
 
-const{name: personNam, gpa} = person;
+const{name: personName, gpa=3.51} = person;//3.51 default value;
 
 console.log(personName);
 console.log(gpa);
+
+//
+const employee = {
+    name: "RAwvy",
+    adress: {
+        city: "Dhaka",
+        zip: "1216",
+    },
+
+};
+const {adress:{city, zip},} = employee;
+// console.log(adress);
+console.log(city);
+console.log(zip);
+
+//
+const employee1 = {
+    name1: "RAwvy",
+    adress1: {
+        city1: "Dhaka",
+        zip1: "1216",
+    },
+
+};
+
+const {address1} = employee1;
+console.log(address1);
+
+// const{city1,zip1} = address1;
+// console.log(city1);
+// console.log(zip1);
+
+
+// function Destructuring 
+
+const greet = (obj) => {
+    const {name, age} = obj;
+    console.log(`Hello, ${name}, You are ${age} years old.`);
+};
+
+const userInfo = {
+    name: "Abir",
+    age: 25,
+};
+
+greet(userInfo);
