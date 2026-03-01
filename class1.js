@@ -37,3 +37,11 @@ const{name: myName, age} = user;
 
 console.log(myName);
 console.log(age);
+
+//
+const person = {name: "Rawvy"};
+
+const{name: personNam, gpa} = person;
+
+console.log(personName);
+console.log(gpa);
