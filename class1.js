@@ -91,3 +91,39 @@ const userInfo = {
 };
 
 greet(userInfo);
+
+//destructor with array;
+const student = [
+    { name: "Tahfim", score: 90},
+    { name: "Abir", score: 70},
+];
+
+const [{ name: topperName}, {score: lowerScore}] = student;
+
+console.log(topperName);
+console.log(lowerScore);
+
+//Spred Operator;
+const nums1 = [1, 2, 3];
+const nums2 = [4, 5, 6];
+
+//three dot is spred operator;
+const allNums = [...nums1, ...nums2];
+console.log(allNums);
+
+//another example;
+const original = [1, 2, 3];
+const copied = [...original];
+
+console.log(copied);
+copied.push(4);
+console.log(copied);
+console.log(original);
+
+//
+const user1 = {name: "Ratul", age: 10};
+
+const newUser = {...user1, name: "Iftear", age: 50};
+
+console.log(newUser);
+console.log(user);
