@@ -127,3 +127,28 @@ const newUser = {...user1, name: "Iftear", age: 50};
 
 console.log(newUser);
 console.log(user);
+
+//Rest Operator;
+const person2 = {
+    name: "Abir",
+    age: 25,
+    city: "Dhaka",
+};
+
+const { name, ...rest } = person2;
+console.log(rest);
+
+//Rest operator;
+function total(...nums) {
+    console.log(nums);
+    return nums.reduce((acc, curr)=> acc + curr, 0);
+    // return a + b;
+}
+
+console.log(total(1, 2, 3, 4));
+
+//Example of rest operator;
+const fruits = ["apple", "banana", "mango", "orange"];
+const [firstFruit, ...restFruits] = fruits;
+console.log(firstFruit);
+console.log(restFruits);
