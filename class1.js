@@ -152,3 +152,7 @@ const fruits = ["apple", "banana", "mango", "orange"];
 const [firstFruit, ...restFruits] = fruits;
 console.log(firstFruit);
 console.log(restFruits);
+
+//Web Storage:Local Storate: untill manualy cleared and session Storage;
+
+localStorage.setItem("name", "Abir");
