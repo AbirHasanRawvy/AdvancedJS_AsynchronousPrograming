@@ -156,3 +156,23 @@ console.log(restFruits);
 //Web Storage:Local Storate: untill manualy cleared and session Storage;
 
 localStorage.setItem("name", "Abir");
+
+
+//optional training;
+const user2 = {};
+
+console.log(user2?.address2?.city2);
+
+//eample;
+const employee2 = {
+    name: "Abir",
+    contact: {
+        email: "abirhasanrawvy@gmail.com",
+    },
+};
+
+console.log(employee2?.name);
+console.log(employee2?.contact?.email);
+console.log(employee2?.contact?.phone);
+
+//Nullish Coalescing;
