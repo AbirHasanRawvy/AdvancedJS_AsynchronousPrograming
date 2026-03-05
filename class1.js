@@ -202,3 +202,35 @@ if("abir") {
 } else {
     console.log("I am in else");
 }
+
+//
+const arr = [1, 2, 3, 4, 5];
+const result = arr.map((elem)=> elem % 2 === 0);
+console.log(result);
+
+const newRes = result.map((item) => {
+    if (item) {
+        return "It is even";
+    } else {
+        return "It is false";
+    }
+});
+console.log(newRes);
+
+//Scope: like space.
+//1.global scope;
+//2.functional scope;
+//3.block scope;
+let globalVar = "I am global";//1.global scope;
+function myFun() {
+    let functionVar = "I am inside the function";//2.functional scope;
+    console.log(functionVar);
+    if(true) {
+        let blockVar = "I am inside the block";//3.block scope;
+        console.log(blockVar);
+        console.log(functionVar);
+        console.log(globalVar);
+    }
+}
+console.log(globalVar);
+myFun();
