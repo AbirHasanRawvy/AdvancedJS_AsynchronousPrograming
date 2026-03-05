@@ -175,4 +175,30 @@ console.log(employee2?.name);
 console.log(employee2?.contact?.email);
 console.log(employee2?.contact?.phone);
 
-//Nullish Coalescing;
+//Nullish Coalescing: only work for null and undefiend;
+
+let userInput = null;
+let userName = userInput ?? "User Name";
+console.log(userName);
+
+//
+let userInput1 = "Abir";
+let userName1 = userInput1 ?? "User Name";
+console.log(userName1);
+
+//Falsy and Truthy values;
+//Falsy: 0, -0, 0n, "", null, undefiend, Nan 
+//Truthy values: without upper falsy value all are truthy value;
+
+if("") {
+    console.log("I am in if");
+} else {
+    console.log("I am in else");
+}
+
+//
+if("abir") {
+    console.log("I am in if");
+} else {
+    console.log("I am in else");
+}
