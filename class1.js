@@ -217,7 +217,7 @@ const newRes = result.map((item) => {
 });
 console.log(newRes);
 
-//Scope: like space.
+//Scope: like space/ It also called closure.
 //1.global scope;
 //2.functional scope;
 //3.block scope;
@@ -234,3 +234,45 @@ function myFun() {
 }
 console.log(globalVar);
 myFun();
+
+//Lexical Environment;
+let a1 = "g-a";
+
+function outerFun() {
+    let b1 = "f-b";
+    function innerFun(){
+        let c1 = "f-c";
+        console.log(a1);
+        console.log(b1);
+        console.log(c1);
+    }
+    innerFun();
+};
+outerFun();
+
+//Scope chain;
+//inner() > outer() > global();
+let a2 = "g-a";
+
+function outerFun1(){
+    let b2 = "f-b";
+    function innerFun(){
+        let c2 = "f-c";
+        return "Inner Function";
+    }
+    const resInner = innerFun();
+    console.log(resInner);
+    return "Outer Function";
+}
+
+const resOuter = outerFun1();
+console.log(resOuter);
+
+//
+const buttonClick = document.getElementById("clickBtn");
+
+buttonClick.addEventListener("click", fetchData);
+
+function fetchData() {
+    console.log("Clicked!");
+}
