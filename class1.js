@@ -274,5 +274,15 @@ const buttonClick = document.getElementById("clickBtn");
 buttonClick.addEventListener("click", fetchData);
 
 function fetchData() {
-    console.log("Clicked!");
+    // console.log("Clicked!");
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);//'GET','data base link', 'true';
+    xhr.onprogress = function () {
+        console.log("On Progess");
+    };
+
+    xhr.onload = function(){
+        console.log(this.responseText);
+    };
+    xhr.send();
 }
