@@ -282,7 +282,39 @@ function fetchData() {
     };
 
     xhr.onload = function(){
-        console.log(this.responseText);
+        // console.log(this.responseText);
+     try{
+           if(this.status === 200){
+            console.log(this.responseText);
+        }else{
+            console.log("Something went wrong!");
+        }
+     } catch (error) {
+        console.log(error.message);
+     }
+
     };
     xhr.send();
+}
+//
+const buttonClick1 = document.getElementById("clickBtn01");
+
+buttonClick1.addEventListener("click", fetchData1);
+
+function fetchData1(){
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {"Content-Type": "application/json",
+
+        },
+        body: JSON.stringify({
+            title: "New Post",
+            body: "This is the body",
+            userId: 12,
+        })
+    })//for get and delete we dont need to options;
+    .then((response) => response.json())
+    .then(data=>console.log(data))
+    .catch((error) => console.log(error));
 }
